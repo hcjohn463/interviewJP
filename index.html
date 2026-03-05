@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>面接スクリプト</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <h1 class="site-title">📝 面接スクリプト</h1>
+    <p class="site-sub">面接準備ノート</p>
+  </header>
+
+  <!-- ===== COMPANY TAB NAV ===== -->
+  <nav class="company-nav" id="top">
+    <button class="company-btn active" data-company="it">💻 IT企業</button>
+    <button class="company-btn" data-company="steel">🏭 鋼鐵企業</button>
+  </nav>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <main class="main-layout">
+
+    <!-- ===== SECTION NAV BUTTONS ===== -->
+    <nav class="section-nav" id="section-nav">
+      <p class="nav-label">📌 セクション一覧</p>
+
+      <!-- IT企業 nav -->
+      <div class="nav-group" data-for="it">
+        <button class="nav-btn" data-target="it-self-intro">自己紹介</button>
+        <button class="nav-btn" data-target="it-motivation">志望動機</button>
+        <button class="nav-btn" data-target="it-strength">強み</button>
+        <button class="nav-btn has-sub" data-target="it-past-work">過去の業務経験</button>
+        <button class="nav-btn has-sub" data-target="it-cpp-project">C++経験と背景</button>
+        <button class="nav-btn has-sub" data-target="it-cpp-lang">C/C++ 言語特性</button>
+        <button class="nav-btn has-sub" data-target="it-optimize">低レベル最適化・並列化</button>
+        <button class="nav-btn has-sub" data-target="it-automotive">車載・組込みシステム</button>
+        <button class="nav-btn has-sub" data-target="it-softskill">個人特質・ソフトスキル</button>
+      </div>
+
+      <!-- 鋼鐵企業 nav -->
+      <div class="nav-group hidden" data-for="steel">
+        <button class="nav-btn" data-target="st-self-intro">自己紹介</button>
+        <button class="nav-btn" data-target="st-motivation">志望動機</button>
+        <button class="nav-btn" data-target="st-strength">強み</button>
+        <button class="nav-btn" data-target="st-why-not-it">なぜITでなく鉄鋼か</button>
+        <button class="nav-btn" data-target="st-why-japan">なぜ日本で働きたいか</button>
+        <button class="nav-btn" data-target="st-personality">周りからどんな人と言われるか</button>
+        <button class="nav-btn" data-target="st-hobby">趣味・休日の過ごし方</button>
+        <button class="nav-btn" data-target="st-student">学生時代に力を入れたこと</button>
+        <button class="nav-btn" data-target="st-research">大学院研究について</button>
+        <button class="nav-btn" data-target="st-after-grad">卒業後の経歴</button>
+        <button class="nav-btn" data-target="st-future-career">将来の展望</button>
+      </div>
+    </nav>
+
+    <!-- ===== CONTENT AREA ===== -->
+    <div class="content-area">
+
+      <!-- ===== IT企業 CONTENT ===== -->
+      <div class="company-content active" data-content="it">
+
+        <section class="script-section" id="it-self-intro">
+          <h2 class="section-title">
+            <span class="section-tag">自己紹介</span>
+          </h2>
+          <div class="script-block">
+            <p>本日はお時間をいただき、誠にありがとうございます。○○と申します。現在、国立台湾師範大学大学院にて人工知能を専攻しております。</p>
+            <p>これまでC/C++を用いたシステム開発および低レイヤー最適化に注力してまいりました。OpenMPやpthreadsによるCPU並列化、NVIDIA
+              CUDAによるGPU高速化の実装経験があり、ハードウェア特性を考慮した最適化を強みとしております。</p>
+            <p>また、CyberLinkにてQAエンジニアとしてインターンを経験し、Root Cause Analysisを通じて複数の重要不具合を解決いたしました。</p>
+            <p>本日はどうぞよろしくお願いいたします。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="it-motivation">
+          <h2 class="section-title">
+            <span class="section-tag">志望動機（車載向け）</span>
+          </h2>
+          <div class="script-block">
+            <p>貴社を志望いたしました理由は、組み込み技術と高信頼性が求められる車載分野において、自身の低レイヤー開発経験を最大限に活かせると考えたためです。</p>
+            <p>私はこれまでAIと組み込みの融合を研究してまいりましたが、最終的に社会実装されるプロダクトに携わりたいという思いが強くあります。</p>
+            <p>特にRTOS環境やLinuxベースの組み込み開発において、性能最適化や安定性向上に貢献できると考えております。</p>
+            <p>長期的には技術面でチームを支えられるエンジニアへ成長したいと考えております。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="it-strength">
+          <h2 class="section-title">
+            <span class="section-tag">強み</span>
+          </h2>
+          <div class="script-block">
+            <p>私の強みは高い集中力と継続力です。大学院の研究やQAエンジニアの業務において、長時間パソコンの前で細かい作業を行う場面が多くありましたが、最後まで責任を持って取り組むことができます。</p>
+            <p>その結果、課題に対して効率的に対応し、短期間で成果を出すことができました。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="it-past-work">
+          <h2 class="section-title">
+            <span class="section-tag">過去の業務経験（QA / 実習）</span>
+            <span class="sub-badge">Q①〜③</span>
+          </h2>
+          <div class="sub-questions">
+            <div class="sub-q">
+              <h3 class="sub-title">Q① — 在CyberLink做什麼？</h3>
+              <div class="script-block">
+                <p>マルチメディアソフトウェアの品質保証業務を担当しておりました。主にテストケース設計、実行、不具合報告、およびRoot Cause
+                  Analysisを行っておりました。開発者と直接連携し、再現手順の明確化やログ解析を通じて10件以上の重要不具合を解決いたしました。</p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q② — 你如何做Root Cause Analysis？</h3>
+              <div class="script-block">
+                <p>まず再現条件を特定し、ログおよびメモリダンプを解析しました。次に影響範囲を確認し、原因を仮説化した上で検証を行いました。必要に応じて開発者と協議し、修正案の妥当性も確認いたしました。</p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q③ — 有沒有遇到難搞Bug？</h3>
+              <div class="script-block">
+                <p>メモリリークによる長時間動作後のクラッシュ事例がありました。Valgrindおよびログ分析により原因を特定し、解放漏れ箇所を修正することで安定性を改善しました。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="script-section" id="it-cpp-project">
+          <h2 class="section-title">
+            <span class="section-tag">C++経験と背景</span>
+            <span class="sub-badge">Q1〜4</span>
+          </h2>
+          <div class="sub-questions">
+            <div class="sub-q">
+              <h3 class="sub-title">Q1 — 大學院研究專案做了什麼C/C++開發？</h3>
+              <div class="script-block">
+                <p>大学院では、物理シミュレーションの高速化プロジェクトに従事しました。具体的には、元々 Python や MATLAB でプロトタイプされていた計算処理を C++
+                  で再実装し、アルゴリズムの計算効率を最大化させる開発を行いました。</p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q2 — 你在專案中的角色是什麼？</h3>
+              <div class="script-block">
+                <p>私はメインの開発者として、アーキテクチャの設計から実装、そしてパフォーマンスのチューニングまでを一貫して担当しました。特に、ボトルネックとなっている計算部分を特定し、並列化を導入する役割を担いました。
+                </p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q3 — 開發的系統規模多大？</h3>
+              <div class="script-block">
+                <p>プロジェクト全体では約 5,000 行程度の規模で、コアとなる計算モジュールは 10 個ほどのファイルで構成されていました。</p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q4 — 開發中最困難的點與如何解決？</h3>
+              <div class="script-block">
+                <p>並列化に伴うデータの依存関係の解決に苦労しました。デッドロックやレースコンディションが発生した際、gdb や Valgrind
+                  を用いて徹底的にデバッグを行い、効率的な同期機構（Mutexなど）を導入することで解決しました。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="script-section" id="it-cpp-lang">
+          <h2 class="section-title">
+            <span class="section-tag">C/C++ 言語特性</span>
+            <span class="sub-badge">Q5〜9</span>
+          </h2>
+          <div class="sub-questions">
+            <div class="sub-q">
+              <h3 class="sub-title">Q5 — 使用C++哪個版本？</h3>
+              <div class="script-block">
+                <p>主に C++17 を使用していました。モダンな機能を活用することで、コードの安全性と記述の簡潔さを両立させています。</p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q6 — 如何活用C++ Modern功能？</h3>
+              <div class="script-block">
+                <p>std::unique_ptr や std::shared_ptr などの スマートポインタ を活用し、手動の delete を避けることでメモリリークを徹底的に防ぎました。また、std::vector
+                  などの STL容器 を使い、メモリ管理の安全性を高めています。</p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q7 — 如何防止Memory Leak？</h3>
+              <div class="script-block">
+                <p>スマートポインタの使用に加え、RAII原則（Resource Acquisition Is Initialization）を徹底しました。また、開発の最終段階では必ず Valgrind
+                  等のツールでメモリチェックを行っていました。</p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q8 — std::vector 和 std::array 怎麼選用？</h3>
+              <div class="script-block">
+                <p>要素数が動的に変わる場合は std::vector を使用し、要素数がコンパイル時に決まっている場合は std::array
+                  を使用します。車載システムのようなリソースが限られた環境では、スタックメモリを利用する std::array の方がオーバーヘッドが少なく、好ましいケースが多いと考えています。</p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q9 — C和C++怎麼選用？C++的優點是什麼？</h3>
+              <div class="script-block">
+                <p>C言語はハードウェアに近い制御に向いていますが、C++は カプセル化 や テンプレート
+                  を用いることで、高いパフォーマンスを維持しつつ、コードの再利用性と保守性を向上させられる点が大きなメリットだと考えています。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="script-section" id="it-optimize">
+          <h2 class="section-title">
+            <span class="section-tag">低レベル最適化・並列化</span>
+            <span class="sub-badge">Q10〜15</span>
+          </h2>
+          <div class="sub-questions">
+            <div class="sub-q">
+              <h3 class="sub-title">Q10 — 使用什麼Profiling工具？</h3>
+              <div class="script-block">
+                <p>CPUの処理に関しては gprof や perf を使用し、GPUに関しては NVIDIA の Nsight Systems や Nsight Compute
+                  を用いて、カーネルの実行時間やメモリ帯域の利用効率を分析していました。</p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q11 — 最佳化Cache時注意什麼？</h3>
+              <div class="script-block">
+                <p>空間的局所性 を高めるために、データのレイアウトを「配列の構造体（AoS）」から「構造体の配列（SoA）」に変更し、連続したメモリ領域へのアクセスを増やすことでキャッシュミスを最小限に抑えました。
+                </p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q12 — OpenMP 和 pthreads 怎麼選？</h3>
+              <div class="script-block">
+                <p>ループ処理などの単純な並列化には、実装コストの低い OpenMP を使用します。一方で、スレッドの優先度設定や、より細かいライフサイクル管理が必要な複雑なタスク並列化には pthreads
+                  を使用しています。</p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q13 — CUDA實作中如何減少資料傳輸Overhead？</h3>
+              <div class="script-block">
+                <p>ホストとデバイス間の転送を最小限にするため、なるべく多くの処理をGPU側で完結させるようにしました。また、cudaMemcpyAsync
+                  を使用して、計算と通信をオーバーラップさせる（隠蔽する）工夫も行いました。</p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q14 — 如何活用Shared Memory？</h3>
+              <div class="script-block">
+                <p>グローバルメモリへのアクセス頻度を減らすため、ブロック内のスレッド間で頻繁に再利用されるデータを Shared Memory に一度ロードし、高速なアクセスを実現することで全体の処理時間を短縮しました。
+                </p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q15 — 如何避免Race Condition？</h3>
+              <div class="script-block">
+                <p>基本的には std::mutex や std::lock_guard を使用しましたが、パフォーマンスが極めて重要な箇所では、より軽量な
+                  std::atomic（原子操作）を使用してロックフリーな設計を試みました。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="script-section" id="it-automotive">
+          <h2 class="section-title">
+            <span class="section-tag">車載・組込みシステム</span>
+            <span class="sub-badge">Q16〜19</span>
+          </h2>
+          <div class="sub-questions">
+            <div class="sub-q">
+              <h3 class="sub-title">Q16 — 為什麼車載軟體要有「即時性」？</h3>
+              <div class="script-block">
+                <p>自動ブレーキやステアリング制御などの機能は、ミリ秒単位の遅延が人命に関わる事故に直結するためです。処理が「速い」だけでなく、常に「一定の時間内に終わること（決定論的な動作）」が保証される必要があります。
+                </p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q17 — Memory受限環境中如何維持性能？</h3>
+              <div class="script-block">
+                <p>動的なメモリ割り当て（malloc/new）を極力排除し、静的なメモリ確保 を行うことです。これにより、フラグメンテーションを防ぎ、実行時の予測可能性を高めることができます。</p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q18 — 知道MISRA C/C++等規範嗎？</h3>
+              <div class="script-block">
+                <p>実務での使用経験はありませんが、未定義動作を避け、コードの安全性を高めるための厳格なルールであると認識しています。車載エンジニアとして、これらの規約に従った高品質なコードを書く準備はできています。
+                </p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q19 — 怎麼確保自己程式碼的品質？</h3>
+              <div class="script-block">
+                <p>Google Test を用いた 単体テスト を自動化し、カバレッジを意識した検証を行っていました。また、境界値テストを行い、予期せぬ入力に対しても堅牢なコードであることを確認していました。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="script-section" id="it-softskill">
+          <h2 class="section-title">
+            <span class="section-tag">個人特質・ソフトスキル</span>
+            <span class="sub-badge">Q20〜22</span>
+          </h2>
+          <div class="sub-questions">
+            <div class="sub-q">
+              <h3 class="sub-title">Q20 — 為什麼想成為車載工程師？</h3>
+              <div class="script-block">
+                <p>私が培ってきた C++
+                  の最適化スキルを、自動運転という「最も安全性が求められる最先端分野」で試したいと考えたからです。自分の書いたコードが物理的な車両を動かし、社会の安全に貢献することに大きな魅力を感じています。</p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q21 — 學習新技術時如何收集資訊？</h3>
+              <div class="script-block">
+                <p>公式ドキュメントや技術論文を精読するのはもちろん、GitHub
+                  で最新のオープンソースプロジェクトを解析したり、技術コミュニティの動向をチェックして、実際に手を動かしてプロトタイプを作るようにしています。</p>
+              </div>
+            </div>
+            <div class="sub-q">
+              <h3 class="sub-title">Q22 — 團隊意見對立時如何調整？</h3>
+              <div class="script-block">
+                <p>まずは相手の主張の背景を理解し、客観的なデータ（ベンチマーク結果など）に基づいて議論するようにしています。最終的にはプロジェクトの目標（安全性や納期）を最優先に考え、合意形成を目指します。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <!-- /IT企業 -->
+
+      <!-- ===== 鋼鐵企業 CONTENT ===== -->
+      <div class="company-content hidden" data-content="steel">
+
+        <section class="script-section" id="st-self-intro">
+          <h2 class="section-title">
+            <span class="section-tag">自己紹介</span>
+          </h2>
+          <div class="script-block">
+            <p>本日はお忙しい中、面接の機会をいただき、誠にありがとうございます。</p>
+            <p>初めまして、と申します。台湾師範大学大学院修士二年生で、情報工学を専攻し、AIについて研究しております。</p>
+            <p>昨年7月から今年1月まで、サイバーリンクにてQAエンジニアインターンとして勤務し、ソフトウェアの品質管理業務を担当しました。</p>
+            <p>また、大学院入学前には千葉県の居酒屋で１年間アルバイトをし、日本での接客経験もございます。</p>
+            <p>これまでの技術的な知識と日本での経験を活かし、御社に貢献できればと考えております。本日はどうぞよろしくお願いいたします。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="st-motivation">
+          <h2 class="section-title">
+            <span class="section-tag">志望動機</span>
+          </h2>
+          <div class="script-block">
+            <p>私が御社を志望した理由は、素材産業を通してものづくりを支える仕事に魅力を感じたからです。</p>
+            <p>私はこれまで情報工学を専攻し、AIやシステム開発を学んできました。その中で、ソフトウェアだけでなく、実際に社会を支えている産業基盤にも強い関心を持つようになりました。</p>
+            <p>御社は機械構造用鉱管や特殊鉱鉱管という専門性の高い製品を扱い、建設機械や工作機械など幅広い分野のものづくり企業を支えていらっしゃいます。その「産業の土台を支える存在」である点に大きな魅力を感じました。</p>
+            <p>また、営業職としてお客様の課題を理解し、調達から加工までワンストップで提案できる点は、単なる販売ではなく課題解決型の仕事だと感じています。</p>
+            <p>これまでの論理的思考力や課題分析力を活かし、お客様のニーズを的確に把握し、信頼される営業として貢献したいと考え、志望いたしました。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="st-strength">
+          <h2 class="section-title">
+            <span class="section-tag">強み</span>
+          </h2>
+          <div class="script-block">
+            <p>私の強みは高い集中力と継続力です。大学院の研究やQAエンジニアの業務において、長時間パソコンの前で細かい作業を行う場面が多くありましたが、最後まで責任を持って取り組むことができます。</p>
+            <p>その結果、課題に対して効率的に対応し、短期間で成果を出すことができました。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="st-why-not-it">
+          <h2 class="section-title">
+            <span class="section-tag">なぜITでなく鉄鋼か</span>
+          </h2>
+          <div class="script-block">
+            <p>
+              IT分野にも引き続き興味はありますが、自分の専門だけに限らず、日本のものづくり産業全体を理解したいと考えました。特に素材や製造業は産業の基盤であり、その現場を直接お客様と関わりながら理解できる営業職は非常に魅力的だと感じています。技術だけでなく、顧客視点や市場視点を身につけることで、自分の視野を広げたいと考え、志望いたしました。
+            </p>
+          </div>
+        </section>
+
+        <section class="script-section" id="st-why-japan">
+          <h2 class="section-title">
+            <span class="section-tag">なぜ日本で働きたいか</span>
+          </h2>
+          <div class="script-block">
+            <p>日本で働きたい理由は、これまでの日本での生活経験を通して、日本の働き方や企業文化に強い魅力を感じたからです。</p>
+            <p>また、家族も日本で生活しており、長期的に日本でキャリアを築いていきたいと考えています。</p>
+            <p>さらに、実際に日本の環境で働くことで、自分の日本語能力や専門性をより高めたいと思っております。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="st-personality">
+          <h2 class="section-title">
+            <span class="section-tag">周りからどんな人と言われるか</span>
+          </h2>
+          <div class="script-block">
+            <p>友人や同僚からは、理解が早く、課題に対して迅速に対応できる人だと言われます。また、困難な状況でも冷静に物事を整理できる点を評価されることがあります。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="st-hobby">
+          <h2 class="section-title">
+            <span class="section-tag">趣味・休日の過ごし方</span>
+          </h2>
+          <div class="script-block">
+            <p>趣味は読書や技術に関する情報収集です。また、日本にいる家族とビデオ通話をすることも多く、日本の生活や文化について学んでいます。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="st-student">
+          <h2 class="section-title">
+            <span class="section-tag">学生時代に力を入れたこと</span>
+          </h2>
+          <div class="script-block">
+            <p>学生時代に最も力を入れたことは、剣道サークルでの活動です。大学1年生から卒業まで継続して参加し、特に2年生のときには部員から推薦を受け、部長を務めました。</p>
+            <p>
+              当時は部員同士のコミュニケーション不足や参加率の低下という課題がありました。そこで私は、定期的にミーティングを開き、部員一人ひとりの意見を聴く機会を設けました。また、役割分担を明確にし、全員が主体的に参加できる環境づくりを意識しました。
+            </p>
+            <p>その結果、参加率が向上し、他大学との交流試合も円滑に行えるようになりました。この経験を通して、責任感とリーダーシップ、そして周囲と協力することの大切さを学びました。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="st-research">
+          <h2 class="section-title">
+            <span class="section-tag">大学院研究について</span>
+          </h2>
+          <div class="script-block">
+            <p>大学院では、画像内の人物数を推定する研究を行っております。</p>
+            <p>具体的には、AIモデルの軽量化に取り組んでおり、性能を維持しながらモデルサイズを削減し、低スペック環境でも動作可能にすることを目指しています。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="st-after-grad">
+          <h2 class="section-title">
+            <span class="section-tag">卒業後の経歴</span>
+          </h2>
+          <div class="script-block">
+            <p>大学を卒業した後、男性なので、国民の義務を果たして、兵役に行きました。</p>
+            <p>兵役が終わった後、台湾政府が行う就職希望者向けの授業を受けました。</p>
+            <p>その授業を受けている間、台湾の大学院と日本語学校を同時に申し込みました。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="st-future-career">
+          <h2 class="section-title">
+            <span class="section-tag">将来的にも営業としてキャリアを築いていきたいか？</span>
+          </h2>
+          <div class="script-block">
+            <p>将来的にはまず営業としてしっかりと経験を積み、お客様や業界への理解を深めていきたいと考えています。</p>
+            <p>その上で、自分の強みを活かしながら会社にどのように貢献できるかを考え、与えられた役割の中で長期的に成長していきたいと思っています。</p>
+          </div>
+        </section>
+
+      </div>
+      <!-- /鋼鐵企業 -->
+
+    </div>
+    <!-- /content-area -->
+
+  </main>
+
+  <!-- ===== BACK TO TOP BUTTON ===== -->
+  <button class="back-to-top" id="backToTop" title="セクション一覧に戻る">↑</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
