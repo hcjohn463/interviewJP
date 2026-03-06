@@ -144,6 +144,20 @@ body {
   margin-bottom: 0.75rem;
 }
 
+.nav-category {
+  width: 100%;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.9rem;
+  margin-bottom: 0.35rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+  opacity: 0.75;
+}
+
 .nav-group {
   display: flex;
   flex-wrap: wrap;
