@@ -37,14 +37,10 @@
       <!-- IT企業 nav -->
       <div class="nav-group" data-for="it">
         <button class="nav-btn" data-target="it-self-intro">自己紹介</button>
-        <button class="nav-btn" data-target="it-motivation">志望動機</button>
-        <button class="nav-btn" data-target="it-strength">強み</button>
-        <button class="nav-btn has-sub" data-target="it-past-work">過去の業務経験</button>
-        <button class="nav-btn has-sub" data-target="it-cpp-project">C++経験と背景</button>
-        <button class="nav-btn has-sub" data-target="it-cpp-lang">C/C++ 言語特性</button>
-        <button class="nav-btn has-sub" data-target="it-optimize">低レベル最適化・並列化</button>
-        <button class="nav-btn has-sub" data-target="it-automotive">車載・組込みシステム</button>
-        <button class="nav-btn has-sub" data-target="it-softskill">個人特質・ソフトスキル</button>
+        <button class="nav-btn" data-target="it-research">研究開発経験</button>
+        <button class="nav-btn" data-target="it-personal">個人開発経験</button>
+        <button class="nav-btn" data-target="it-team">チーム開発経験</button>
+        <button class="nav-btn" data-target="it-cyberlink">CyberLink経験</button>
       </div>
 
       <!-- 鋼鐵企業 nav -->
@@ -102,11 +98,60 @@
             <span class="section-tag">自己紹介</span>
           </h2>
           <div class="script-block">
-            <p>本日はお時間をいただき、誠にありがとうございます。○○と申します。現在、国立台湾師範大学大学院にて人工知能を専攻しております。</p>
-            <p>これまでC/C++を用いたシステム開発および低レイヤー最適化に注力してまいりました。OpenMPやpthreadsによるCPU並列化、NVIDIA
-              CUDAによるGPU高速化の実装経験があり、ハードウェア特性を考慮した最適化を強みとしております。</p>
-            <p>また、CyberLinkにてQAエンジニアとしてインターンを経験し、Root Cause Analysisを通じて複数の重要不具合を解決いたしました。</p>
-            <p>本日はどうぞよろしくお願いいたします。</p>
+            <p>本日は、面接の機会をいただき誠にありがとうございます。初めまして。張（ちょう）と申します。</p>
+            <p>
+              現在、大学院の修士2年生で、AI技術を専攻しております。これまでC/C++を用いたシステム開発や並列計算の研究に取り組み、OpenMPやCUDAを活用したCPU・GPU並列化によるパフォーマンス最適化を経験しました。
+            </p>
+            <p>
+              さらに研究では、蒸留（Distillation）と量子化を用いてCNNモデルを軽量化し、C言語に変換してRISC-VベースのGemminiアクセラレータを利用することで、FPGA上での高速化を実現しました。その結果、推論速度を約800倍向上させるという成果を収めております。
+            </p>
+            <p>
+              また、CyberLinkでのQAエンジニアインターンを通じて、ソフトウェアのテスト設計やバグの原因分析にも携わりました。これらの経験から、研究と実務の両面において、システム開発に必要な知識とスキルを磨いてまいりました。
+            </p>
+            <p>将来は、C/C++のスキルを活かしたシステム開発エンジニアとして、日本の技術プロジェクトに貢献したいと考えております。本日はよろしくお願いいたします。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="it-research">
+          <h2 class="section-title">
+            <span class="section-tag">研究開発経験</span>
+          </h2>
+          <div class="script-block">
+            <p>大学院の研究では、C++ や CUDA を用いた並列計算を実装し、性能最適化に取り組みました。さらに、蒸留と量子化を用いて CNN モデルを軽量化し、C 言語に変換して RISC-V ベースの Gemmini
+              アクセラレータを利用し、FPGA 上で高速化を実現しました。その結果、推論速度を約 100 倍向上させることに成功しました。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="it-personal">
+          <h2 class="section-title">
+            <span class="section-tag">個人開発経験</span>
+          </h2>
+          <div class="script-block">
+            <p>個人開発として、Python で動画ダウンロードツールを作成し GitHub に公開しました。現在 700 以上のスターを獲得し、多くのユーザーに利用されています。さらに、HTML・CSS・JavaScript
+              を用いてゲーム攻略サイトを制作し、GitHub Pages で公開しました。これまでに 1 万回以上閲覧されています。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="it-team">
+          <h2 class="section-title">
+            <span class="section-tag">チーム開発経験</span>
+          </h2>
+          <div class="script-block">
+            <p>私は大学院で国際チーム開発の経験があります。台湾とドイツの学生が協力してコンピュータビジョンのプロジェクトを行いました。</p>
+            <p>ドイツの学生はロボットアームの制御を担当し、私は画像認識アルゴリズムを担当しました。</p>
+            <p>カメラ画像から物体の位置を検出し、その情報をロボット制御側に送るプログラムを開発しました。</p>
+            <p>英語でコミュニケーションを取りながらインターフェースを調整し、最終的にロボットが物体を認識して動作するシステムを完成させました。</p>
+          </div>
+        </section>
+
+        <section class="script-section" id="it-cyberlink">
+          <h2 class="section-title">
+            <span class="section-tag">CyberLink経験</span>
+          </h2>
+          <div class="script-block">
+            <p>CyberLink でのインターンでは、QA
+              エンジニアとしてソフトウェアの品質向上に取り組みました。具体的には、テストケースを設計・実行して機能を確認し、ユーザー環境を再現してバグの原因を分析しました。その結果、複数の不具合を特定・解決し、製品の改善に貢献しました。また、テスト記録のフォーマットを見直して、開発チームとの連携をスムーズにしました。この経験から、開発の初期段階で品質を意識することの重要性を学びました。
+            </p>
           </div>
         </section>
 
@@ -366,11 +411,12 @@
             <span class="section-tag">自己紹介</span>
           </h2>
           <div class="script-block">
-            <p>本日は面接の機会をいただき、ありがとうございます。</p>
-            <p>初めまして、チョウと申します。現在、台湾師範大学大学院修士2年で、情報工学を専攻し、AIの技術について研究しております。</p>
-            <p>学業以外では、昨年7月から半年間、サイバーリンクでQAエンジニアのインターンを経験しました。ソフトウェアの品質管理を通じて、技術が製品の信頼性に直結することを学びました。</p>
-            <p>また、大学院入学前には千葉県の居酒屋で調理のアルバイトをしていました。忙しい店舗での経験を通じて、チームワークや効率的な業務の進め方を身につけました。</p>
-            <p>これまでの技術的な知見と日本での経験を活かし、御社に貢献できればと考えております。どうぞよろしくお願いいたします。</p>
+            <p>本日は面接の機会をいただきありがとうございます。</p>
+            <p>初めまして、ちょうと申します。</p>
+            <p>今は大学院修士二年生です。AI技術について研究しております。</p>
+            <p>去年の七月から今年の一月まで、サイバーリンクという台湾のIT企業でQAエンジニアのインターンをしていました。そこで、ソフトウェアの品質管理をしました。技術が製品の信頼につながると分かりました。</p>
+            <p>大学院に入学前には、千葉県の居酒屋で一年間アルバイトしていました。すごく忙しかったです。でも、チームワークと効率的な働き方を覚えました。</p>
+            <p>これまでの経験を活かして、御社に貢献したいです。精一杯頑張ります。今日はどうぞよろしくお願いします。</p>
           </div>
         </section>
 
