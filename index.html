@@ -945,12 +945,10 @@
           <div class="note-block">5. 伺服器常見問題：開機失敗、網路不通、服務掛掉怎麼排查。</div>
           <div class="script-block">
 
-            <ul>
-              <li><strong>開機異常：</strong>看 BIOS 提示、<code>dmesg</code>、檢查硬碟/記憶體。</li>
-              <li><strong>網路不通：</strong>檢查 IP、閘道、DNS、防火牆。</li>
-              <li><strong>服務掛掉：</strong>看日誌(<code>journalctl</code>)、系統資源使用率(<code>top</code>, <code>free</code>)、檢查設定檔。
-              </li>
-            </ul>
+            <p>像是 <strong>開機失敗</strong>，我會先看 BIOS 的提示訊息，再用 <code>dmesg</code> 看核心輸出的資訊，通常能發現硬碟或記憶體的異常。</p>
+            <p>如果是 <strong>網路不通</strong>，我會先檢查 IP 設定，再確認閘道和 DNS，最後看防火牆有沒有擋住。</p>
+            <p>至於 <strong>服務掛掉</strong>，我會用 <code>journalctl</code> 看服務的日誌，然後用 <code>top</code> 或 <code>free</code>
+              看系統資源是不是不足，再檢查設定檔有沒有錯。</p>
           </div>
         </section>
 
@@ -987,12 +985,11 @@
           <div class="note-block">3.ping 不通有哪些可能？</div>
           <div class="script-block">
 
-            <ul>
-              <li>IP / 子網路遮罩 / 閘道 等設定錯誤。</li>
-              <li>被沿路的防護牆阻擋 (如阻擋了 ICMP 封包)。</li>
-              <li>對層設備主動關閉了 ICMP 回應。</li>
-              <li>實體網線沒接好或網卡本身異常。</li>
-            </ul>
+            <p>如果 ping 不通，我會這樣判斷原因：</p>
+            <p>有可能是 IP、子網路遮罩或閘道設定錯誤，導致封包根本送不到正確的地方。</p>
+            <p>也可能是沿路的防火牆擋掉了 ICMP 封包，所以 ping 不會回應。</p>
+            <p>有些設備本身就會主動關掉 ICMP 回應，這時候 ping 也會失敗。</p>
+            <p>最後還要考慮實體問題，像是網線沒插好，或者網卡本身異常。</p>
           </div>
         </section>
 
