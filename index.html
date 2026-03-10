@@ -785,13 +785,17 @@
 
             <p><strong>平常在處理 檔案 的話</strong>，最基本的就是 <code>ls</code> 看一下目錄、<code>cd</code> 切換路徑，要搬東西或改名就用
               <code>mv</code>，刪除或建立目錄就用 <code>rm</code> 跟 <code>mkdir</code>。如果想直接看檔案內容，我通常會用 <code>cat</code> 或
-              <code>less</code>，找東西的話 <code>grep</code> 跟 <code>find</code> 絕對是標配。</p>
+              <code>less</code>，找東西的話 <code>grep</code> 跟 <code>find</code> 絕對是標配。
+            </p>
             <p><strong>程序管理 的話</strong>，我習慣用 <code>htop</code>（介面比較好讀）或 <code>top</code> 看一下誰在吃資源，要砍掉失控的程序就直接
-              <code>kill</code>。</p>
+              <code>kill</code>。
+            </p>
             <p><strong>網路 部分</strong>，最常用 <code>ip a</code> 看網卡資訊，<code>ping</code> 測試有沒有通，或是用 <code>ss</code> 跟
-              <code>netstat</code> 查一下 Port 有沒有被佔用。下載檔案或測試 API 就交給 <code>curl</code> 或 <code>wget</code>。</p>
+              <code>netstat</code> 查一下 Port 有沒有被佔用。下載檔案或測試 API 就交給 <code>curl</code> 或 <code>wget</code>。
+            </p>
             <p><strong>最後是 系統資源</strong>，我會習慣用 <code>df -h</code> 看硬碟剩多少，<code>free -h</code> 看記憶體夠不夠用，還有
-              <code>uptime</code> 瞄一下系統載重（Load Average）。</p>
+              <code>uptime</code> 瞄一下系統載重（Load Average）。
+            </p>
           </div>
         </section>
 
@@ -878,13 +882,8 @@
           <div class="note-block">8. 如何排查 Linux 上服務起不來？</div>
           <div class="script-block">
 
-            <ul>
-              <li>使用 <code>systemctl status &lt;服務&gt;</code> 檢查狀態與初步錯誤訊息。</li>
-              <li>使用 <code>journalctl -u &lt;服務&gt;</code> 查看詳細日誌。</li>
-              <li>檢查服務所需的設定檔語法是否正確、相關檔案與目錄的權限設定。</li>
-              <li>檢查服務需使用的 Port 是否被佔用。</li>
-              <li>檢查資料庫或網路等依賴服務是否正常運作。</li>
-            </ul>
+            <p>如果 服務起不來，我第一步一定是先下 <code>systemctl status</code> 看它噴什麼錯。如果資訊不夠，就去翻 <code>journalctl -u</code>
+              看詳細日誌。很多時候其實只是設定檔寫錯，所以我會先檢查語法，或是看 Port 是不是被別人搶走了。</p>
           </div>
         </section>
 
@@ -1306,11 +1305,8 @@
           <div class="note-block">3.磁碟滿了怎麼清？</div>
           <div class="script-block">
 
-            <ol>
-              <li>使用 <code>df -h</code> 找到真正滿掉的掛載點（例如 <code>/var</code> 或 <code>/</code>）。</li>
-              <li>進到佔用過大的目錄，使用 <code>du -sh *</code> 或 <code>find</code> 找出巨型資料夾。</li>
-              <li>確認是否為老舊的 Log 累積過多、系統暫存或是備份檔，確認無用後予以刪除或是轉移至其他備份磁碟。</li>
-            </ol>
+            <p>磁碟爆掉 的話，我會先用 <code>df -h</code> 定位是哪個掛載點滿了，然後進去用 <code>du -sh *</code> 一層一層找哪個資料夾是吃空間的元兇。通常都是老舊的 Log
+              或是沒清掉的備份檔，確認沒用就直接清掉。</p>
           </div>
         </section>
 
