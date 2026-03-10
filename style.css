@@ -287,6 +287,19 @@ body {
   font-size: 0.85rem;
 }
 
+/* ===== NOTE BLOCK (Chinese question hint) ===== */
+.note-block {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  background: rgba(124, 77, 255, 0.08);
+  border: 1px solid rgba(124, 77, 255, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.85rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+}
+
 /* ===== SUB-QUESTIONS ===== */
 .sub-questions {
   margin-top: 1rem;
