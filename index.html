@@ -783,17 +783,15 @@
           <div class="note-block">1. 你常用的 Linux 指令有哪些？請說出檔案、程序、網路、系統資源各 3～5 個。</div>
           <div class="script-block">
 
-            <ul>
-              <li><strong>檔案管理：</strong><code>ls</code>, <code>cd</code>, <code>cp</code>, <code>mv</code>,
-                <code>rm</code>, <code>mkdir</code>, <code>cat</code>, <code>less</code>, <code>find</code>,
-                <code>grep</code></li>
-              <li><strong>程序管理：</strong><code>ps</code>, <code>top</code>, <code>htop</code>, <code>kill</code>,
-                <code>vmstat</code>, <code>iostat</code></li>
-              <li><strong>網路：</strong><code>ip</code>, <code>ping</code>, <code>ss</code>, <code>netstat</code>,
-                <code>traceroute</code>, <code>curl</code>, <code>wget</code></li>
-              <li><strong>系統：</strong><code>df</code>, <code>du</code>, <code>free</code>, <code>uptime</code>,
-                <code>journalctl</code>, <code>systemctl</code></li>
-            </ul>
+            <p><strong>平常在處理 檔案 的話</strong>，最基本的就是 <code>ls</code> 看一下目錄、<code>cd</code> 切換路徑，要搬東西或改名就用
+              <code>mv</code>，刪除或建立目錄就用 <code>rm</code> 跟 <code>mkdir</code>。如果想直接看檔案內容，我通常會用 <code>cat</code> 或
+              <code>less</code>，找東西的話 <code>grep</code> 跟 <code>find</code> 絕對是標配。</p>
+            <p><strong>程序管理 的話</strong>，我習慣用 <code>htop</code>（介面比較好讀）或 <code>top</code> 看一下誰在吃資源，要砍掉失控的程序就直接
+              <code>kill</code>。</p>
+            <p><strong>網路 部分</strong>，最常用 <code>ip a</code> 看網卡資訊，<code>ping</code> 測試有沒有通，或是用 <code>ss</code> 跟
+              <code>netstat</code> 查一下 Port 有沒有被佔用。下載檔案或測試 API 就交給 <code>curl</code> 或 <code>wget</code>。</p>
+            <p><strong>最後是 系統資源</strong>，我會習慣用 <code>df -h</code> 看硬碟剩多少，<code>free -h</code> 看記憶體夠不夠用，還有
+              <code>uptime</code> 瞄一下系統載重（Load Average）。</p>
           </div>
         </section>
 
