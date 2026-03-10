@@ -826,9 +826,9 @@
           <div class="note-block">3. 如何查看系統 Log？</div>
           <div class="script-block">
 
-            <p>如果要看系統 Log，我會先用 <code>journalctl</code> 看服務的紀錄；如果是硬體或開機問題，就用 <code>dmesg</code>；應用程式的話，大部分都在
-              <code>/var/log/</code> 裡面找對應的檔案。
-            </p>
+            <p>通常我會先用 <code>journalctl -u &lt;服務名&gt;</code>，這樣可以直接看到某個服務的運行紀錄，方便排查問題。</p>
+            <p>如果是開機或硬體相關的，我會用 <code>dmesg</code>，它能顯示核心在開機時的訊息，像是硬碟或網卡的異常。</p>
+            <p>至於應用程式的 Log，大部分都會放在 <code>/var/log/</code> 下面，比如 nginx 或 mysql 都有自己的檔案，我會進去查對應的日誌。</p>
           </div>
         </section>
 
@@ -864,10 +864,9 @@
           <div class="note-block">6. 如何查詢 port 是否被佔用？</div>
           <div class="script-block">
 
-            <ul>
-              <li><code>ss -tulnp | grep &lt;port&gt;</code></li>
-              <li><code>netstat -tulnp | grep &lt;port&gt;</code></li>
-            </ul>
+            <p>我通常會用 <code>ss -tulnp | grep &lt;port&gt;</code>，這樣可以直接看到是哪個程式或服務在使用那個 Port。</p>
+            <p>有時候我也會用 <code>netstat -tulnp | grep &lt;port&gt;</code>，效果差不多，只是 <code>ss</code> 在新版本的 Linux 上比較常用。</p>
+            <p>查到之後，就能知道是哪個服務佔用，接著再決定要不要停掉或修改設定。</p>
           </div>
         </section>
 
@@ -876,11 +875,10 @@
           <div class="note-block">7. 檔案權限：chmod、chown、rwx 怎麼理解？</div>
           <div class="script-block">
 
-            <ul>
-              <li><strong>權限數字：</strong><code>r=4</code>, <code>w=2</code>, <code>x=1</code></li>
-              <li><code>chmod 755 &lt;檔案&gt;</code>：設定擁有者rwx，群組及其他rx。</li>
-              <li><code>chown user:group &lt;檔案&gt;</code>：更改檔案擁有者與群組。</li>
-            </ul>
+            <p>檔案權限就是 <code>r</code>、<code>w</code>、<code>x</code> 三種，數字分別是
+              <code>4</code>、<code>2</code>、<code>1</code>。像 <code>chmod 755</code> 就是擁有者有全部權限，其他人只有讀跟執行；如果要改檔案的擁有者，就用
+              <code>chown</code>。
+            </p>
           </div>
         </section>
 
@@ -899,15 +897,7 @@
           <div class="note-block">9. 請簡述 Linux 的開機程序？</div>
           <div class="script-block">
 
-            <p>Linux 的開機程序大致可以分為以下階段：</p>
-            <ol>
-              <li><strong>BIOS / UEFI (硬體自檢)</strong>：開機後進行 POST (Power-On Self-Test)，檢查硬體資源並尋找開機裝置。</li>
-              <li><strong>MBR / GPT</strong>：讀取開機裝置前段的開機管理程式。</li>
-              <li><strong>Boot Loader (如 GRUB2)</strong>：提供選單選擇作業系統，並將指定的核心 (Kernel) 與 Initramfs 載入記憶體。</li>
-              <li><strong>Kernel & initramfs (核心載入)</strong>：核心接管硬體，載入必要的驅動程式，並掛載真正的根目錄 (/)。</li>
-              <li><strong>init / systemd</strong>：核心呼叫系統的第一支程式 (PID=1)，載入對應的 target 初始化系統環境。</li>
-              <li><strong>啟動服務與登入介面</strong>：根據設定啟動各項背景服務，最後提供 Login 提示字元或圖形介面。</li>
-            </ol>
+            <p>Linux 開機流程大概就是 BIOS/UEFI 做硬體檢查 → MBR/GPT 讀開機程式 → GRUB 載入核心 → Kernel 掛載根目錄 → systemd 初始化 → 啟動服務跟登入介面。</p>
           </div>
         </section>
 
@@ -926,15 +916,7 @@
           <div class="note-block">2. 伺服器安裝後，基本初始化你會做哪些設定？</div>
           <div class="script-block">
 
-            <ul>
-              <li>更新套件 (<code>apt update / dnf update</code>)</li>
-              <li>設定 IP、主機名</li>
-              <li>設定 SSH，關閉不必要服務</li>
-              <li>設定防火牆 (<code>ufw / firewalld</code>)</li>
-              <li>建立使用者與權限管控</li>
-              <li>磁碟分割規劃：<code>/</code>, <code>/home</code>, <code>swap</code>，依用途分區</li>
-              <li>設定時區與 NTP 同步</li>
-            </ul>
+            <p>伺服器安裝好之後，我會先更新套件，再設定 IP 和主機名，調整 SSH 和防火牆，建立使用者和權限管控，磁碟分區規劃好，最後設定時區跟 NTP 同步，確保系統安全又穩定。</p>
           </div>
         </section>
 
@@ -943,12 +925,9 @@
           <div class="note-block">3. 如何規劃磁碟分割？</div>
           <div class="script-block">
 
-            <p>一般會依用途進行磁碟分割规划，例如：</p>
-            <ul>
-              <li><code>/</code>：根目錄，系統核心與多數程式安裝處。</li>
-              <li><code>/home</code>：使用者資料區，與系統隔離避免重灌遺失資料。</li>
-              <li><code>swap</code>：置換空間，當實體記憶體不足時做為緩衝。</li>
-            </ul>
+            <p>磁碟分割我會依用途來分，像 <code>/</code> 放系統，<code>/home</code> 放使用者資料，<code>swap</code> 當記憶體不足的緩衝，有需要的話再分
+              <code>/var</code> 或 <code>/tmp</code>，避免影響整個系統。
+            </p>
           </div>
         </section>
 
@@ -957,12 +936,7 @@
           <div class="note-block">4. 遠端管理：SSH 設定、金鑰驗證、安全性基本觀念。</div>
           <div class="script-block">
 
-            <ul>
-              <li>使用金鑰登入，取代純密碼。</li>
-              <li>關閉 root 的預設密碼遠端登入 (<code>PermitRootLogin no</code>)。</li>
-              <li>修改預設的 SSH Port (例如改掉預設的 22 port)。</li>
-              <li>配合防火牆限制，只允許白名單 IP 連線 SSH。</li>
-            </ul>
+            <p>遠端管理我主要用 SSH 金鑰登入，關掉 root 密碼登入，再把預設的 22 port 改掉，最後用防火牆限制只有白名單 IP 能連，這樣安全性會比較高。</p>
           </div>
         </section>
 
