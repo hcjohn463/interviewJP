@@ -135,6 +135,7 @@
         <button class="nav-btn" data-target="dg-linux-6">Port 佔用查詢</button>
         <button class="nav-btn" data-target="dg-linux-7">檔案權限理解</button>
         <button class="nav-btn" data-target="dg-linux-8">服務起不來排查</button>
+        <button class="nav-btn" data-target="dg-linux-9">Linux 開機程序</button>
 
         <p class="nav-category">二, 伺服器 & 系統安裝</p>
         <button class="nav-btn" data-target="dg-server-1">安裝過的發行版</button>
@@ -783,10 +784,15 @@
           <div class="script-block">
 
             <ul>
-              <li><strong>檔案管理：</strong><code>ls</code>, <code>cd</code>, <code>cp</code>, <code>mv</code>, <code>rm</code>, <code>mkdir</code>, <code>cat</code>, <code>less</code>, <code>find</code>, <code>grep</code></li>
-              <li><strong>程序管理：</strong><code>ps</code>, <code>top</code>, <code>htop</code>, <code>kill</code>, <code>vmstat</code>, <code>iostat</code></li>
-              <li><strong>網路：</strong><code>ip</code>, <code>ping</code>, <code>ss</code>, <code>netstat</code>, <code>traceroute</code>, <code>curl</code>, <code>wget</code></li>
-              <li><strong>系統：</strong><code>df</code>, <code>du</code>, <code>free</code>, <code>uptime</code>, <code>journalctl</code>, <code>systemctl</code></li>
+              <li><strong>檔案管理：</strong><code>ls</code>, <code>cd</code>, <code>cp</code>, <code>mv</code>,
+                <code>rm</code>, <code>mkdir</code>, <code>cat</code>, <code>less</code>, <code>find</code>,
+                <code>grep</code></li>
+              <li><strong>程序管理：</strong><code>ps</code>, <code>top</code>, <code>htop</code>, <code>kill</code>,
+                <code>vmstat</code>, <code>iostat</code></li>
+              <li><strong>網路：</strong><code>ip</code>, <code>ping</code>, <code>ss</code>, <code>netstat</code>,
+                <code>traceroute</code>, <code>curl</code>, <code>wget</code></li>
+              <li><strong>系統：</strong><code>df</code>, <code>du</code>, <code>free</code>, <code>uptime</code>,
+                <code>journalctl</code>, <code>systemctl</code></li>
             </ul>
           </div>
         </section>
@@ -884,6 +890,23 @@
           </div>
         </section>
 
+        <section class="script-section" id="dg-linux-9">
+          <h2 class="section-title"><span class="section-tag">Linux 開機程序</span></h2>
+          <div class="note-block">9. 請簡述 Linux 的開機程序？</div>
+          <div class="script-block">
+
+            <p>Linux 的開機程序大致可以分為以下階段：</p>
+            <ol>
+              <li><strong>BIOS / UEFI (硬體自檢)</strong>：開機後進行 POST (Power-On Self-Test)，檢查硬體資源並尋找開機裝置。</li>
+              <li><strong>MBR / GPT</strong>：讀取開機裝置前段的開機管理程式。</li>
+              <li><strong>Boot Loader (如 GRUB2)</strong>：提供選單選擇作業系統，並將指定的核心 (Kernel) 與 Initramfs 載入記憶體。</li>
+              <li><strong>Kernel & initramfs (核心載入)</strong>：核心接管硬體，載入必要的驅動程式，並掛載真正的根目錄 (/)。</li>
+              <li><strong>init / systemd</strong>：核心呼叫系統的第一支程式 (PID=1)，載入對應的 target 初始化系統環境。</li>
+              <li><strong>啟動服務與登入介面</strong>：根據設定啟動各項背景服務，最後提供 Login 提示字元或圖形介面。</li>
+            </ol>
+          </div>
+        </section>
+
         <!-- 二, 伺服器 & 系統安裝 -->
         <section class="script-section" id="dg-server-1">
           <h2 class="section-title"><span class="section-tag">安裝過的發行版</span></h2>
@@ -947,7 +970,8 @@
             <ul>
               <li><strong>開機異常：</strong>看 BIOS 提示、<code>dmesg</code>、檢查硬碟/記憶體。</li>
               <li><strong>網路不通：</strong>檢查 IP、閘道、DNS、防火牆。</li>
-              <li><strong>服務掛掉：</strong>看日誌(<code>journalctl</code>)、系統資源使用率(<code>top</code>, <code>free</code>)、檢查設定檔。</li>
+              <li><strong>服務掛掉：</strong>看日誌(<code>journalctl</code>)、系統資源使用率(<code>top</code>, <code>free</code>)、檢查設定檔。
+              </li>
             </ul>
           </div>
         </section>
@@ -1015,7 +1039,8 @@
           <div class="script-block">
 
             <ul>
-              <li><strong>常用軟體防火牆：</strong><code>firewalld</code> (CentOS/Rocky)、<code>ufw</code> (Ubuntu)、<code>iptables</code> 等。</li>
+              <li><strong>常用軟體防火牆：</strong><code>firewalld</code> (CentOS/Rocky)、<code>ufw</code>
+                (Ubuntu)、<code>iptables</code> 等。</li>
               <li><strong>安全原則：</strong>白名單策略，即只開啟必要的 Port (如 80, 443)，其餘對外的 Port 預設關閉。</li>
             </ul>
           </div>
