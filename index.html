@@ -1032,11 +1032,8 @@
           <div class="note-block">5.防火牆基本觀念（firewalld /ufw/iptables）</div>
           <div class="script-block">
 
-            <ul>
-              <li><strong>常用軟體防火牆：</strong><code>firewalld</code> (CentOS/Rocky)、<code>ufw</code>
-                (Ubuntu)、<code>iptables</code> 等。</li>
-              <li><strong>安全原則：</strong>白名單策略，即只開啟必要的 Port (如 80, 443)，其餘對外的 Port 預設關閉。</li>
-            </ul>
+            <p>至於 防火牆，現在主流不是 <code>ufw</code> 就是 <code>firewalld</code>，我的原則就是「白名單模式」，除了必要的 Port 像 80 或 443
+              以外，剩下的通通鎖起來，這樣才安全。</p>
           </div>
         </section>
 
