@@ -25,6 +25,7 @@
   <nav class="company-nav" id="top">
     <button class="company-btn active" data-company="it">💻 IT企業</button>
     <button class="company-btn" data-company="steel">🏭 鋼鐵企業</button>
+    <button class="company-btn" data-company="digital">☁️ 數位無限軟體</button>
   </nav>
 
   <!-- ===== MAIN LAYOUT ===== -->
@@ -119,6 +120,66 @@
         <button class="nav-btn" data-target="st-q2">逆質問2：勤務地</button>
         <button class="nav-btn" data-target="st-q3">逆質問3：市場</button>
         <button class="nav-btn" data-target="st-closing">面試結束</button>
+
+      </div>
+
+      <!-- 數位無限軟體 nav -->
+      <div class="nav-group hidden" data-for="digital">
+
+        <p class="nav-category">一, Linux必考題</p>
+        <button class="nav-btn" data-target="dg-linux-1">常用的 Linux 指令</button>
+        <button class="nav-btn" data-target="dg-linux-2">查看系統資源</button>
+        <button class="nav-btn" data-target="dg-linux-3">查看系統 Log</button>
+        <button class="nav-btn" data-target="dg-linux-4">管理系統服務</button>
+        <button class="nav-btn" data-target="dg-linux-5">網路相關指令</button>
+        <button class="nav-btn" data-target="dg-linux-6">Port 佔用查詢</button>
+        <button class="nav-btn" data-target="dg-linux-7">檔案權限理解</button>
+        <button class="nav-btn" data-target="dg-linux-8">服務起不來排查</button>
+
+        <p class="nav-category">二, 伺服器 & 系統安裝</p>
+        <button class="nav-btn" data-target="dg-server-1">安裝過的發行版</button>
+        <button class="nav-btn" data-target="dg-server-2">基本初始化設定</button>
+        <button class="nav-btn" data-target="dg-server-3">磁碟分割規劃</button>
+        <button class="nav-btn" data-target="dg-server-4">遠端管理與安全</button>
+        <button class="nav-btn" data-target="dg-server-5">常見問題排查</button>
+
+        <p class="nav-category">三、網路基礎 & 故障排除</p>
+        <button class="nav-btn" data-target="dg-network-1">網路基礎名詞解釋</button>
+        <button class="nav-btn" data-target="dg-network-2">網路不通排查流程</button>
+        <button class="nav-btn" data-target="dg-network-3">ping 不通的原因</button>
+        <button class="nav-btn" data-target="dg-network-4">DNS 異常判斷</button>
+        <button class="nav-btn" data-target="dg-network-5">防火牆基本觀念</button>
+        <button class="nav-btn" data-target="dg-network-6">網路與路由觀念</button>
+
+        <p class="nav-category">四、虛擬化 VM</p>
+        <button class="nav-btn" data-target="dg-vm-1">虛擬機與 Hypervisor</button>
+        <button class="nav-btn" data-target="dg-vm-2">用過的虛擬化技術</button>
+        <button class="nav-btn" data-target="dg-vm-3">虛擬機網路模式</button>
+        <button class="nav-btn" data-target="dg-vm-4">VM 常見問題處理</button>
+
+        <p class="nav-category">五、使用者設備 / 硬體問題</p>
+        <button class="nav-btn" data-target="dg-hw-1">設備連不上伺服器</button>
+        <button class="nav-btn" data-target="dg-hw-2">網卡與 WiFi 異常</button>
+        <button class="nav-btn" data-target="dg-hw-3">簡單硬體故障判斷</button>
+
+        <p class="nav-category">六、Python / ML / MLOps</p>
+        <button class="nav-btn" data-target="dg-ml-1">Python 專案經驗</button>
+        <button class="nav-btn" data-target="dg-ml-2">PyTorch / TensorFlow 場景</button>
+        <button class="nav-btn" data-target="dg-ml-3">MLOps 與部署流程</button>
+        <button class="nav-btn" data-target="dg-ml-4">模型部署環境</button>
+        <button class="nav-btn" data-target="dg-ml-5">Docker 容器概念</button>
+
+        <p class="nav-category">七、售前技術相關</p>
+        <button class="nav-btn" data-target="dg-presales-1">向非技術客戶解釋</button>
+        <button class="nav-btn" data-target="dg-presales-2">技術簡報與 Demo</button>
+        <button class="nav-btn" data-target="dg-presales-3">需求分析與解決方案</button>
+        <button class="nav-btn" data-target="dg-presales-4">多問題優先順序</button>
+
+        <p class="nav-category">八、簡單實務小測驗</p>
+        <button class="nav-btn" data-target="dg-test-1">服務起不來怎麼查</button>
+        <button class="nav-btn" data-target="dg-test-2">網路不通一步步排查</button>
+        <button class="nav-btn" data-target="dg-test-3">磁碟滿了怎麼清</button>
+        <button class="nav-btn" data-target="dg-test-4">程序掛掉 / CPU 爆了</button>
 
       </div>
     </nav>
@@ -711,6 +772,332 @@
 
       </div>
       <!-- /鋼鐵企業 -->
+
+      <!-- ===== 數位無限軟體 CONTENT ===== -->
+      <div class="company-content hidden" data-content="digital">
+
+        <!-- 一, Linux必考題 -->
+        <section class="script-section" id="dg-linux-1">
+          <h2 class="section-title"><span class="section-tag">常用的 Linux 指令</span></h2>
+          <div class="note-block">1. 你常用的 Linux 指令有哪些？請說出檔案、程序、網路、系統資源各 3～5 個。</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-linux-2">
+          <h2 class="section-title"><span class="section-tag">系統負載等資源查看</span></h2>
+          <div class="note-block">2. 如何查看 Linux 系統負載、記憶體、磁碟使用率？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-linux-3">
+          <h2 class="section-title"><span class="section-tag">查看系統 Log</span></h2>
+          <div class="note-block">3. 如何查看系統 Log？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-linux-4">
+          <h2 class="section-title"><span class="section-tag">管理系統服務</span></h2>
+          <div class="note-block">4. 如何管理系統服務？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-linux-5">
+          <h2 class="section-title"><span class="section-tag">網路相關指令</span></h2>
+          <div class="note-block">5. 網路相關指令</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-linux-6">
+          <h2 class="section-title"><span class="section-tag">Port 佔用查詢</span></h2>
+          <div class="note-block">6. 如何查詢 port 是否被佔用？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-linux-7">
+          <h2 class="section-title"><span class="section-tag">檔案權限理解</span></h2>
+          <div class="note-block">7. 檔案權限：chmod、chown、rwx 怎麼理解？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-linux-8">
+          <h2 class="section-title"><span class="section-tag">服務起不來排查</span></h2>
+          <div class="note-block">8. 如何排查 Linux 上服務起不來？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <!-- 二, 伺服器 & 系統安裝 -->
+        <section class="script-section" id="dg-server-1">
+          <h2 class="section-title"><span class="section-tag">安裝過的發行版</span></h2>
+          <div class="note-block">1. 你安裝過哪些 Linux 發行版？（CentOS / Ubuntu / Rocky 等）</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-server-2">
+          <h2 class="section-title"><span class="section-tag">基本初始化設定</span></h2>
+          <div class="note-block">2. 伺服器安裝後，基本初始化你會做哪些設定？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-server-3">
+          <h2 class="section-title"><span class="section-tag">磁碟分割規劃</span></h2>
+          <div class="note-block">3. 如何規劃磁碟分割？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-server-4">
+          <h2 class="section-title"><span class="section-tag">遠端管理與安全</span></h2>
+          <div class="note-block">4. 遠端管理：SSH 設定、金鑰驗證、安全性基本觀念。</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-server-5">
+          <h2 class="section-title"><span class="section-tag">常見問題排查</span></h2>
+          <div class="note-block">5. 伺服器常見問題：開機失敗、網路不通、服務掛掉怎麼排查。</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <!-- 三、網路基礎 & 故障排除 -->
+        <section class="script-section" id="dg-network-1">
+          <h2 class="section-title"><span class="section-tag">網路基礎名詞解釋</span></h2>
+          <div class="note-block">1.請解釋：IP、子網路遮罩、閘道、DNS。</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-network-2">
+          <h2 class="section-title"><span class="section-tag">網路不通排查流程</span></h2>
+          <div class="note-block">2.客戶說「網路不通」，你標準排查流程是什麼？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-network-3">
+          <h2 class="section-title"><span class="section-tag">ping 不通的原因</span></h2>
+          <div class="note-block">3.ping 不通有哪些可能？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-network-4">
+          <h2 class="section-title"><span class="section-tag">DNS 異常判斷</span></h2>
+          <div class="note-block">4.DNS 異常怎麼判斷？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-network-5">
+          <h2 class="section-title"><span class="section-tag">防火牆基本觀念</span></h2>
+          <div class="note-block">5.防火牆基本觀念（firewalld /ufw/iptables）</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-network-6">
+          <h2 class="section-title"><span class="section-tag">網路與路由觀念</span></h2>
+          <div class="note-block">6.區域網路、對外網路、路由基本觀念。</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <!-- 四、虛擬化 VM -->
+        <section class="script-section" id="dg-vm-1">
+          <h2 class="section-title"><span class="section-tag">虛擬機與 Hypervisor</span></h2>
+          <div class="note-block">1. 什麼是虛擬機？什麼是 Hypervisor？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-vm-2">
+          <h2 class="section-title"><span class="section-tag">用過的虛擬化技術</span></h2>
+          <div class="note-block">2. 你用過哪些虛擬化？（VMware / Hyper-V / KVM / VirtualBox）</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-vm-3">
+          <h2 class="section-title"><span class="section-tag">虛擬機網路模式</span></h2>
+          <div class="note-block">3. 虛擬機網路模式有哪幾種?</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-vm-4">
+          <h2 class="section-title"><span class="section-tag">VM 常見問題處理</span></h2>
+          <div class="note-block">4. VM 常見問題： 開不起來 網路不通 磁碟空間不足 你怎麼處理？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <!-- 五、使用者設備 / 硬體問題排除 -->
+        <section class="script-section" id="dg-hw-1">
+          <h2 class="section-title"><span class="section-tag">設備連不上伺服器</span></h2>
+          <div class="note-block">1. 使用者電腦 / 設備連不上伺服器，你怎麼排查？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-hw-2">
+          <h2 class="section-title"><span class="section-tag">網卡與 WiFi 異常</span></h2>
+          <div class="note-block">2. 網卡異常、無法抓 IP、連不上 WiFi 怎麼處理？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-hw-3">
+          <h2 class="section-title"><span class="section-tag">簡單硬體故障判斷</span></h2>
+          <div class="note-block">3. 簡單硬體故障判斷：開機無畫面、風扇轉但不開機等。</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <!-- 六、Python / ML / MLOps -->
+        <section class="script-section" id="dg-ml-1">
+          <h2 class="section-title"><span class="section-tag">Python 專案經驗</span></h2>
+          <div class="note-block">1.你用 Python 做過什麼專案？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-ml-2">
+          <h2 class="section-title"><span class="section-tag">PyTorch / TensorFlow 場景</span></h2>
+          <div class="note-block">2.PyTorch / TensorFlow 用在什麼場景？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-ml-3">
+          <h2 class="section-title"><span class="section-tag">MLOps 與部署流程</span></h2>
+          <div class="note-block">3.什麼是 MLOps？模型訓練 → 部署流程你了解嗎？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-ml-4">
+          <h2 class="section-title"><span class="section-tag">模型部署環境</span></h2>
+          <div class="note-block">4.模型部署會用到哪些環境？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-ml-5">
+          <h2 class="section-title"><span class="section-tag">Docker 容器概念</span></h2>
+          <div class="note-block">5.你會 Docker 嗎？（容器基本概念）</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <!-- 七、售前技術相關（結合工作內容） -->
+        <section class="script-section" id="dg-presales-1">
+          <h2 class="section-title"><span class="section-tag">向非技術客戶解釋</span></h2>
+          <div class="note-block">1.你如何向非技術客戶解釋技術問題？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-presales-2">
+          <h2 class="section-title"><span class="section-tag">技術簡報與 Demo</span></h2>
+          <div class="note-block">2.如何做技術簡報與 Demo？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-presales-3">
+          <h2 class="section-title"><span class="section-tag">需求分析與解決方案</span></h2>
+          <div class="note-block">3.客戶提出需求，你如何分析並給出解決方案？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-presales-4">
+          <h2 class="section-title"><span class="section-tag">多問題優先順序</span></h2>
+          <div class="note-block">4.同時多個問題進來，你如何排優先順序？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <!-- 八、簡單實務小測驗 -->
+        <section class="script-section" id="dg-test-1">
+          <h2 class="section-title"><span class="section-tag">服務起不來怎麼查</span></h2>
+          <div class="note-block">1.服務起不來怎麼查？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-test-2">
+          <h2 class="section-title"><span class="section-tag">網路不通一步步排查</span></h2>
+          <div class="note-block">2.網路不通怎麼一步步排查？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-test-3">
+          <h2 class="section-title"><span class="section-tag">磁碟滿了怎麼清</span></h2>
+          <div class="note-block">3.磁碟滿了怎麼清？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+        <section class="script-section" id="dg-test-4">
+          <h2 class="section-title"><span class="section-tag">程序掛掉 / CPU 爆了</span></h2>
+          <div class="note-block">4.程序掛掉 / CPU 爆了怎麼處理？</div>
+          <div class="script-block">
+            <p></p>
+          </div>
+        </section>
+
+      </div>
+      <!-- /數位無限軟體 -->
 
     </div>
     <!-- /content-area -->
