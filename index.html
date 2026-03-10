@@ -815,12 +815,9 @@
           <div class="note-block">2. 如何查看 Linux 系統負載、記憶體、磁碟使用率？</div>
           <div class="script-block">
 
-            <ul>
-              <li><strong>系統負載：</strong><code>uptime</code>, <code>top</code>, <code>htop</code></li>
-              <li><strong>記憶體：</strong><code>free -h</code>, <code>vmstat</code></li>
-              <li><strong>磁碟使用率：</strong><code>df -h</code></li>
-              <li><strong>資料夾大小：</strong><code>du -sh</code></li>
-            </ul>
+            <p>如果要看系統負載，我會用 <code>htop</code>，因為它能即時顯示 CPU 和記憶體的使用情況；記憶體我會用 <code>free -h</code>，快速看已用和剩餘；磁碟我會用
+              <code>df -h</code> 看分區使用率；如果要看某個資料夾大小，就用 <code>du -sh</code>。
+            </p>
           </div>
         </section>
 
@@ -829,11 +826,9 @@
           <div class="note-block">3. 如何查看系統 Log？</div>
           <div class="script-block">
 
-            <ul>
-              <li><strong>系統日誌：</strong><code>journalctl -u &lt;服務名&gt;</code></li>
-              <li><strong>開機/硬體：</strong><code>dmesg</code></li>
-              <li><strong>應用程式：</strong>通常在 <code>/var/log/</code> 下，依服務不同。</li>
-            </ul>
+            <p>如果要看系統 Log，我會先用 <code>journalctl</code> 看服務的紀錄；如果是硬體或開機問題，就用 <code>dmesg</code>；應用程式的話，大部分都在
+              <code>/var/log/</code> 裡面找對應的檔案。
+            </p>
           </div>
         </section>
 
@@ -842,10 +837,11 @@
           <div class="note-block">4. 如何管理系統服務？</div>
           <div class="script-block">
 
-            <ul>
-              <li><strong>管理操作：</strong><code>systemctl start/stop/restart/status/enable &lt;服務名&gt;</code></li>
-              <li><strong>啟用開機自動：</strong><code>systemctl enable &lt;服務名&gt;</code></li>
-            </ul>
+            <p>我通常會用 <code>systemctl</code> 來操作，比如說要啟動服務就用 <code>systemctl start &lt;服務名&gt;</code>，停止或重啟也一樣是
+              <code>stop</code>、<code>restart</code>。
+            </p>
+            <p>如果只是要確認服務狀態，我會用 <code>systemctl status &lt;服務名&gt;</code>，這樣可以看到目前是 active 還是 failed。</p>
+            <p>另外，如果希望服務在開機時自動啟動，我會加上 <code>systemctl enable &lt;服務名&gt;</code>。</p>
           </div>
         </section>
 
