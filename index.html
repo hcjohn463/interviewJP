@@ -781,7 +781,13 @@
           <h2 class="section-title"><span class="section-tag">常用的 Linux 指令</span></h2>
           <div class="note-block">1. 你常用的 Linux 指令有哪些？請說出檔案、程序、網路、系統資源各 3～5 個。</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>檔案管理：</strong><code>ls</code>, <code>cd</code>, <code>cp</code>, <code>mv</code>, <code>rm</code>, <code>mkdir</code>, <code>cat</code>, <code>less</code>, <code>find</code>, <code>grep</code></li>
+              <li><strong>程序管理：</strong><code>ps</code>, <code>top</code>, <code>htop</code>, <code>kill</code>, <code>vmstat</code>, <code>iostat</code></li>
+              <li><strong>網路：</strong><code>ip</code>, <code>ping</code>, <code>ss</code>, <code>netstat</code>, <code>traceroute</code>, <code>curl</code>, <code>wget</code></li>
+              <li><strong>系統：</strong><code>df</code>, <code>du</code>, <code>free</code>, <code>uptime</code>, <code>journalctl</code>, <code>systemctl</code></li>
+            </ul>
           </div>
         </section>
 
@@ -789,7 +795,13 @@
           <h2 class="section-title"><span class="section-tag">系統負載等資源查看</span></h2>
           <div class="note-block">2. 如何查看 Linux 系統負載、記憶體、磁碟使用率？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>系統負載：</strong><code>uptime</code>, <code>top</code>, <code>htop</code></li>
+              <li><strong>記憶體：</strong><code>free -h</code>, <code>vmstat</code></li>
+              <li><strong>磁碟使用率：</strong><code>df -h</code></li>
+              <li><strong>資料夾大小：</strong><code>du -sh</code></li>
+            </ul>
           </div>
         </section>
 
@@ -797,7 +809,12 @@
           <h2 class="section-title"><span class="section-tag">查看系統 Log</span></h2>
           <div class="note-block">3. 如何查看系統 Log？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>系統日誌：</strong><code>journalctl -u &lt;服務名&gt;</code></li>
+              <li><strong>開機/硬體：</strong><code>dmesg</code></li>
+              <li><strong>應用程式：</strong>通常在 <code>/var/log/</code> 下，依服務不同。</li>
+            </ul>
           </div>
         </section>
 
@@ -805,7 +822,11 @@
           <h2 class="section-title"><span class="section-tag">管理系統服務</span></h2>
           <div class="note-block">4. 如何管理系統服務？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>管理操作：</strong><code>systemctl start/stop/restart/status/enable &lt;服務名&gt;</code></li>
+              <li><strong>啟用開機自動：</strong><code>systemctl enable &lt;服務名&gt;</code></li>
+            </ul>
           </div>
         </section>
 
@@ -813,7 +834,13 @@
           <h2 class="section-title"><span class="section-tag">網路相關指令</span></h2>
           <div class="note-block">5. 網路相關指令</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>ip：</strong>查看/設定網路</li>
+              <li><strong>ping：</strong>測試連通性</li>
+              <li><strong>ss / netstat：</strong>查看連線、Port</li>
+              <li><strong>traceroute：</strong>查看路由節點</li>
+            </ul>
           </div>
         </section>
 
@@ -821,7 +848,11 @@
           <h2 class="section-title"><span class="section-tag">Port 佔用查詢</span></h2>
           <div class="note-block">6. 如何查詢 port 是否被佔用？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><code>ss -tulnp | grep &lt;port&gt;</code></li>
+              <li><code>netstat -tulnp | grep &lt;port&gt;</code></li>
+            </ul>
           </div>
         </section>
 
@@ -829,7 +860,12 @@
           <h2 class="section-title"><span class="section-tag">檔案權限理解</span></h2>
           <div class="note-block">7. 檔案權限：chmod、chown、rwx 怎麼理解？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>權限數字：</strong><code>r=4</code>, <code>w=2</code>, <code>x=1</code></li>
+              <li><code>chmod 755 &lt;檔案&gt;</code>：設定擁有者rwx，群組及其他rx。</li>
+              <li><code>chown user:group &lt;檔案&gt;</code>：更改檔案擁有者與群組。</li>
+            </ul>
           </div>
         </section>
 
@@ -837,7 +873,14 @@
           <h2 class="section-title"><span class="section-tag">服務起不來排查</span></h2>
           <div class="note-block">8. 如何排查 Linux 上服務起不來？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li>使用 <code>systemctl status &lt;服務&gt;</code> 檢查狀態與初步錯誤訊息。</li>
+              <li>使用 <code>journalctl -u &lt;服務&gt;</code> 查看詳細日誌。</li>
+              <li>檢查服務所需的設定檔語法是否正確、相關檔案與目錄的權限設定。</li>
+              <li>檢查服務需使用的 Port 是否被佔用。</li>
+              <li>檢查資料庫或網路等依賴服務是否正常運作。</li>
+            </ul>
           </div>
         </section>
 
@@ -846,7 +889,8 @@
           <h2 class="section-title"><span class="section-tag">安裝過的發行版</span></h2>
           <div class="note-block">1. 你安裝過哪些 Linux 發行版？（CentOS / Ubuntu / Rocky 等）</div>
           <div class="script-block">
-            <p></p>
+
+            <p>我有使用過 Ubuntu、CentOS、Rocky Linux，也接觸過 Debian。</p>
           </div>
         </section>
 
@@ -854,7 +898,16 @@
           <h2 class="section-title"><span class="section-tag">基本初始化設定</span></h2>
           <div class="note-block">2. 伺服器安裝後，基本初始化你會做哪些設定？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li>更新套件 (<code>apt update / dnf update</code>)</li>
+              <li>設定 IP、主機名</li>
+              <li>設定 SSH，關閉不必要服務</li>
+              <li>設定防火牆 (<code>ufw / firewalld</code>)</li>
+              <li>建立使用者與權限管控</li>
+              <li>磁碟分割規劃：<code>/</code>, <code>/home</code>, <code>swap</code>，依用途分區</li>
+              <li>設定時區與 NTP 同步</li>
+            </ul>
           </div>
         </section>
 
@@ -862,7 +915,13 @@
           <h2 class="section-title"><span class="section-tag">磁碟分割規劃</span></h2>
           <div class="note-block">3. 如何規劃磁碟分割？</div>
           <div class="script-block">
-            <p></p>
+
+            <p>一般會依用途進行磁碟分割规划，例如：</p>
+            <ul>
+              <li><code>/</code>：根目錄，系統核心與多數程式安裝處。</li>
+              <li><code>/home</code>：使用者資料區，與系統隔離避免重灌遺失資料。</li>
+              <li><code>swap</code>：置換空間，當實體記憶體不足時做為緩衝。</li>
+            </ul>
           </div>
         </section>
 
@@ -870,7 +929,13 @@
           <h2 class="section-title"><span class="section-tag">遠端管理與安全</span></h2>
           <div class="note-block">4. 遠端管理：SSH 設定、金鑰驗證、安全性基本觀念。</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li>使用金鑰登入，取代純密碼。</li>
+              <li>關閉 root 的預設密碼遠端登入 (<code>PermitRootLogin no</code>)。</li>
+              <li>修改預設的 SSH Port (例如改掉預設的 22 port)。</li>
+              <li>配合防火牆限制，只允許白名單 IP 連線 SSH。</li>
+            </ul>
           </div>
         </section>
 
@@ -878,7 +943,12 @@
           <h2 class="section-title"><span class="section-tag">常見問題排查</span></h2>
           <div class="note-block">5. 伺服器常見問題：開機失敗、網路不通、服務掛掉怎麼排查。</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>開機異常：</strong>看 BIOS 提示、<code>dmesg</code>、檢查硬碟/記憶體。</li>
+              <li><strong>網路不通：</strong>檢查 IP、閘道、DNS、防火牆。</li>
+              <li><strong>服務掛掉：</strong>看日誌(<code>journalctl</code>)、系統資源使用率(<code>top</code>, <code>free</code>)、檢查設定檔。</li>
+            </ul>
           </div>
         </section>
 
@@ -887,7 +957,13 @@
           <h2 class="section-title"><span class="section-tag">網路基礎名詞解釋</span></h2>
           <div class="note-block">1.請解釋：IP、子網路遮罩、閘道、DNS。</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>IP：</strong>網路上主機的位置/位址。</li>
+              <li><strong>子網路遮罩：</strong>用來區分內部網段與外部網段。</li>
+              <li><strong>閘道：</strong>當封包要前往其他網段時，對外的預設出口。</li>
+              <li><strong>DNS：</strong>負責將域名轉化為 IP 位址的服務。</li>
+            </ul>
           </div>
         </section>
 
@@ -895,7 +971,15 @@
           <h2 class="section-title"><span class="section-tag">網路不通排查流程</span></h2>
           <div class="note-block">2.客戶說「網路不通」，你標準排查流程是什麼？</div>
           <div class="script-block">
-            <p></p>
+
+            <ol>
+              <li>檢查本機 IP 設定是否正確。</li>
+              <li>ping 閘道，確認內部區域網連通正常。</li>
+              <li>ping 外部 IP（如 <code>8.8.8.8</code>），確認對外出網正常。</li>
+              <li>ping 域名，確認 DNS 解析正常。</li>
+              <li>若上述有問題，依序檢查防火牆、路由、交換器或對端設備。</li>
+              <li>用 <code>curl</code> 或 <code>telnet</code> 測試應用層指定 port 是否有通。</li>
+            </ol>
           </div>
         </section>
 
@@ -903,7 +987,13 @@
           <h2 class="section-title"><span class="section-tag">ping 不通的原因</span></h2>
           <div class="note-block">3.ping 不通有哪些可能？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li>IP / 子網路遮罩 / 閘道 等設定錯誤。</li>
+              <li>被沿路的防護牆阻擋 (如阻擋了 ICMP 封包)。</li>
+              <li>對層設備主動關閉了 ICMP 回應。</li>
+              <li>實體網線沒接好或網卡本身異常。</li>
+            </ul>
           </div>
         </section>
 
@@ -911,7 +1001,11 @@
           <h2 class="section-title"><span class="section-tag">DNS 異常判斷</span></h2>
           <div class="note-block">4.DNS 異常怎麼判斷？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li>如果 IP 可以 ping 通，但 ping 域名卻找不到主機，那多半就是 DNS 的問題。</li>
+              <li>可以檢查 <code>/etc/resolv.conf</code> 裡的 DNS server，或者系統的網卡 DNS 設定是否正確。</li>
+            </ul>
           </div>
         </section>
 
@@ -919,7 +1013,11 @@
           <h2 class="section-title"><span class="section-tag">防火牆基本觀念</span></h2>
           <div class="note-block">5.防火牆基本觀念（firewalld /ufw/iptables）</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>常用軟體防火牆：</strong><code>firewalld</code> (CentOS/Rocky)、<code>ufw</code> (Ubuntu)、<code>iptables</code> 等。</li>
+              <li><strong>安全原則：</strong>白名單策略，即只開啟必要的 Port (如 80, 443)，其餘對外的 Port 預設關閉。</li>
+            </ul>
           </div>
         </section>
 
@@ -927,7 +1025,12 @@
           <h2 class="section-title"><span class="section-tag">網路與路由觀念</span></h2>
           <div class="note-block">6.區域網路、對外網路、路由基本觀念。</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>區域網 (LAN)：</strong>局域網路內部的電腦互通，不需透過外部路由。</li>
+              <li><strong>對外網 (WAN)：</strong>需要透過閘道器/路由器，將封包送往外部網際網路。</li>
+              <li><strong>路由 (Routing)：</strong>當網路封包要從 A 到 B 時，決定封包要走哪一條路徑送達的機制。</li>
+            </ul>
           </div>
         </section>
 
@@ -936,7 +1039,11 @@
           <h2 class="section-title"><span class="section-tag">虛擬機與 Hypervisor</span></h2>
           <div class="note-block">1. 什麼是虛擬機？什麼是 Hypervisor？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>虛擬機 (VM)：</strong>在實體電腦上透過軟體模擬出的獨立主機環境，擁有自己的 OS。</li>
+              <li><strong>Hypervisor：</strong>在實體硬體和虛擬機之間的管理層，負責分配資源給虛擬機（例如 VMware, KVM, Hyper-V）。</li>
+            </ul>
           </div>
         </section>
 
@@ -944,7 +1051,12 @@
           <h2 class="section-title"><span class="section-tag">用過的虛擬化技術</span></h2>
           <div class="note-block">2. 你用過哪些虛擬化？（VMware / Hyper-V / KVM / VirtualBox）</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li>本地端常用 VMware Workstation、VirtualBox。</li>
+              <li>有接觸過 KVM 虛擬化平台。</li>
+              <li>雲端 VM 環境也熟悉，如 AWS EC2 等。</li>
+            </ul>
           </div>
         </section>
 
@@ -952,7 +1064,12 @@
           <h2 class="section-title"><span class="section-tag">虛擬機網路模式</span></h2>
           <div class="note-block">3. 虛擬機網路模式有哪幾種?</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>橋接模式 (Bridged)：</strong>VM 視同實體機，與宿主機在同一個網段，能直接取外部 IP。</li>
+              <li><strong>NAT 模式：</strong>VM 透過宿主機網路當作跳板分享上網，外部連不進 VM (需做 Port Forwarding)。</li>
+              <li><strong>僅主機模式 (Host-Only)：</strong>VM 只能與宿主機連線，無法直接上網。</li>
+            </ul>
           </div>
         </section>
 
@@ -960,7 +1077,12 @@
           <h2 class="section-title"><span class="section-tag">VM 常見問題處理</span></h2>
           <div class="note-block">4. VM 常見問題： 開不起來 網路不通 磁碟空間不足 你怎麼處理？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>開不起來：</strong>檢查映像檔是否有損毀、資源配置是否超出實體極限、Hypervisor 後台服務是否正常。</li>
+              <li><strong>網路不通：</strong>檢查網路模式(NAT/Bridged)、IP 是否正確、是否有防護牆阻擋。</li>
+              <li><strong>磁碟滿：</strong>先清理無用大檔案，若空間仍不夠，則透過 LVM 擴增磁碟容量。</li>
+            </ul>
           </div>
         </section>
 
@@ -969,7 +1091,13 @@
           <h2 class="section-title"><span class="section-tag">設備連不上伺服器</span></h2>
           <div class="note-block">1. 使用者電腦 / 設備連不上伺服器，你怎麼排查？</div>
           <div class="script-block">
-            <p></p>
+
+            <ol>
+              <li>先確認實體的網路線或 WiFi 訊號正常連接。</li>
+              <li>檢查本機的網路設定是否正確獲取到 IP。</li>
+              <li>用 <code>ping</code> 測試伺服器 IP 看看兩端是否連通。</li>
+              <li>如果能 <code>ping</code> 通，則檢查後端服務的埠號狀態、防護牆規則是否擋住了，以及伺服器服務是否真正啟動運行中。</li>
+            </ol>
           </div>
         </section>
 
@@ -977,7 +1105,13 @@
           <h2 class="section-title"><span class="section-tag">網卡與 WiFi 異常</span></h2>
           <div class="note-block">2. 網卡異常、無法抓 IP、連不上 WiFi 怎麼處理？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li>檢查網卡的驅動程式是否有遺失或錯誤驚嘆號。</li>
+              <li>檢查網線以及交換機狀態是否亮燈正常運作。</li>
+              <li>若抓不到 IP，檢查內部 DHCP 服務是否正常。</li>
+              <li>可以嘗試將網卡停用後再重新啟用，或者釋放並重新獲取 IP。</li>
+            </ul>
           </div>
         </section>
 
@@ -985,7 +1119,11 @@
           <h2 class="section-title"><span class="section-tag">簡單硬體故障判斷</span></h2>
           <div class="note-block">3. 簡單硬體故障判斷：開機無畫面、風扇轉但不開機等。</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>開機無畫面：</strong>如果是主機通電但無畫面，可先檢查電源供應是否足夠、顯示卡或螢幕線材有無接觸不良、以及記憶體重新插拔。</li>
+              <li><strong>風扇轉但不開機：</strong>主機板通常會有錯誤燈號提示（如 CPU、DRAM、VGA 燈）、或者發出 BIOS 逼逼聲，最常見的處置為將記憶體拔下擦拭金手指並重新安插。</li>
+            </ul>
           </div>
         </section>
 
@@ -994,7 +1132,13 @@
           <h2 class="section-title"><span class="section-tag">Python 專案經驗</span></h2>
           <div class="note-block">1.你用 Python 做過什麼專案？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li>利用 Python 撰寫資料處理與清理工具。</li>
+              <li>撰寫自動化腳本，幫助減少日常系統管理的手動操作負擔。</li>
+              <li>開發網路工具與小爬蟲。</li>
+              <li>跑過機器學習或是深度學習相關的實驗與專案。</li>
+            </ul>
           </div>
         </section>
 
@@ -1002,7 +1146,12 @@
           <h2 class="section-title"><span class="section-tag">PyTorch / TensorFlow 場景</span></h2>
           <div class="note-block">2.PyTorch / TensorFlow 用在什麼場景？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li>主要用於深度學習模式的端到端開發。</li>
+              <li>包含資料驗證、自定義神經網路結構搭建。</li>
+              <li>執行模型訓練過程與最後的模型成效評估。</li>
+            </ul>
           </div>
         </section>
 
@@ -1010,7 +1159,11 @@
           <h2 class="section-title"><span class="section-tag">MLOps 與部署流程</span></h2>
           <div class="note-block">3.什麼是 MLOps？模型訓練 → 部署流程你了解嗎？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>MLOps：</strong>是讓機器學習流程自動化與規範化的一套實踐。流程涵蓋了：資料處理 → 模型訓練 → 測試驗證 → 打包 → 模型部署 → 上線監控。</li>
+              <li><strong>目標：</strong>確保模型可以穩定且快速地從實驗室環境部署上線，並在線上持續維運與更新。</li>
+            </ul>
           </div>
         </section>
 
@@ -1018,7 +1171,13 @@
           <h2 class="section-title"><span class="section-tag">模型部署環境</span></h2>
           <div class="note-block">4.模型部署會用到哪些環境？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li>一般的 Linux 實體伺服器。</li>
+              <li>Docker 容器化環境 (最普遍被應用)。</li>
+              <li>虛擬化環境內部署。</li>
+              <li>基於大平台的 MLflow 或 Kubeflow。</li>
+            </ul>
           </div>
         </section>
 
@@ -1026,7 +1185,11 @@
           <h2 class="section-title"><span class="section-tag">Docker 容器概念</span></h2>
           <div class="note-block">5.你會 Docker 嗎？（容器基本概念）</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>概念：</strong>Docker 是一種輕量級容器技術，能將應用程式及其相依的函式庫、環境配置打包成一個「映像檔 (Image)」。</li>
+              <li><strong>優點：</strong>因為環境全部被打包在一起，可以實現「在所有地方都能跑出相同結果」(跨環境一致)，並且提供快速部署跟橫向擴充的能力。</li>
+            </ul>
           </div>
         </section>
 
@@ -1035,7 +1198,12 @@
           <h2 class="section-title"><span class="section-tag">向非技術客戶解釋</span></h2>
           <div class="note-block">1.你如何向非技術客戶解釋技術問題？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li>盡量避免過多專有名詞，遇到專門技術則使用日常生活的「比喻」來解釋。</li>
+              <li>注重溝通技術達成的「結果」與「價值」，而不是死板的「運作原理」。</li>
+              <li>每說明完一個段落，會適時反問或確認對方是否已經理解。</li>
+            </ul>
           </div>
         </section>
 
@@ -1043,7 +1211,13 @@
           <h2 class="section-title"><span class="section-tag">技術簡報與 Demo</span></h2>
           <div class="note-block">2.如何做技術簡報與 Demo？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li><strong>先確認客戶痛點：</strong>針對客戶最在意的地方準備內容。</li>
+              <li><strong>重點講解解決方案：</strong>讓客戶很快知道產品能帶來什麼好處。</li>
+              <li><strong>流程簡潔為主：</strong>Demo 不要設計過於冗長繁雜的操作。</li>
+              <li><strong>事先測試環境：</strong>避免現場出糗，並備妥簡單易懂的系統架構圖來輔助說明。</li>
+            </ul>
           </div>
         </section>
 
@@ -1051,7 +1225,13 @@
           <h2 class="section-title"><span class="section-tag">需求分析與解決方案</span></h2>
           <div class="note-block">3.客戶提出需求，你如何分析並給出解決方案？</div>
           <div class="script-block">
-            <p></p>
+
+            <ol>
+              <li>與客戶充分討論，釐清並記錄他們的真正需求與痛點。</li>
+              <li>分析評估客戶現有的系統基礎環境。</li>
+              <li>針對需求，提出對應的可行性系統架構或流程設定。</li>
+              <li>最後提供清楚的導入步驟說明與成功驗證方式，讓客戶放心。</li>
+            </ol>
           </div>
         </section>
 
@@ -1059,7 +1239,12 @@
           <h2 class="section-title"><span class="section-tag">多問題優先順序</span></h2>
           <div class="note-block">4.同時多個問題進來，你如何排優先順序？</div>
           <div class="script-block">
-            <p></p>
+
+            <ul>
+              <li>優先處理<strong>「嚴重影響服務運作或導致客戶整體中斷」</strong>的重大問題。</li>
+              <li>之後再處理次要與不會立即造成影響的一般問題。</li>
+              <li>在排定優先順序後，會主動向提交問題的客戶回報目前的「預期處理時間」，以降低他們的焦慮與建立信任感。</li>
+            </ul>
           </div>
         </section>
 
@@ -1068,7 +1253,13 @@
           <h2 class="section-title"><span class="section-tag">服務起不來怎麼查</span></h2>
           <div class="note-block">1.服務起不來怎麼查？</div>
           <div class="script-block">
-            <p></p>
+
+            <ol>
+              <li>使用 <code>systemctl status &lt;服務&gt;</code> 來查看服務狀態與錯誤提示。</li>
+              <li>使用 <code>journalctl -u &lt;服務&gt;</code> 查詢詳細服務啟動日誌。</li>
+              <li>確認設定檔有無寫錯 (例如 <code>nginx -t</code>)。</li>
+              <li>確認監聽的 Port 是否被佔用，並檢查相關權限。</li>
+            </ol>
           </div>
         </section>
 
@@ -1076,7 +1267,14 @@
           <h2 class="section-title"><span class="section-tag">網路不通一步步排查</span></h2>
           <div class="note-block">2.網路不通怎麼一步步排查？</div>
           <div class="script-block">
-            <p></p>
+
+            <ol>
+              <li>檢查本機網路線與 IP 配置。</li>
+              <li><code>ping 閘道IP</code> 判斷網段內通暢否。</li>
+              <li><code>ping 8.8.8.8</code> 判斷是否得出外網。</li>
+              <li><code>ping google.com</code> 確認是否為 DNS 設定問題。</li>
+              <li>檢查相關節點的路徑、防護牆或交換器設定。</li>
+            </ol>
           </div>
         </section>
 
@@ -1084,7 +1282,12 @@
           <h2 class="section-title"><span class="section-tag">磁碟滿了怎麼清</span></h2>
           <div class="note-block">3.磁碟滿了怎麼清？</div>
           <div class="script-block">
-            <p></p>
+
+            <ol>
+              <li>使用 <code>df -h</code> 找到真正滿掉的掛載點（例如 <code>/var</code> 或 <code>/</code>）。</li>
+              <li>進到佔用過大的目錄，使用 <code>du -sh *</code> 或 <code>find</code> 找出巨型資料夾。</li>
+              <li>確認是否為老舊的 Log 累積過多、系統暫存或是備份檔，確認無用後予以刪除或是轉移至其他備份磁碟。</li>
+            </ol>
           </div>
         </section>
 
@@ -1092,7 +1295,12 @@
           <h2 class="section-title"><span class="section-tag">程序掛掉 / CPU 爆了</span></h2>
           <div class="note-block">4.程序掛掉 / CPU 爆了怎麼處理？</div>
           <div class="script-block">
-            <p></p>
+
+            <ol>
+              <li>輸入 <code>top</code> 或是 <code>htop</code> 找出這時哪個程序佔用了大量 CPU 或記憶體資源。</li>
+              <li>若是無主或失控的異常程序，下指令 <code>kill &lt;PID&gt;</code> 強制中止。</li>
+              <li>查看應用程式的專屬 Log 以及系統 <code>dmesg</code> 或 <code>journalctl</code> 日誌，分析掛掉的根本原因 (如設定錯誤、OOM 或硬體負載過載)。</li>
+            </ol>
           </div>
         </section>
 
