@@ -993,14 +993,11 @@
           <div class="note-block">2.客戶說「網路不通」，你標準排查流程是什麼？</div>
           <div class="script-block">
 
-            <ol>
-              <li>檢查本機 IP 設定是否正確。</li>
-              <li>ping 閘道，確認內部區域網連通正常。</li>
-              <li>ping 外部 IP（如 <code>8.8.8.8</code>），確認對外出網正常。</li>
-              <li>ping 域名，確認 DNS 解析正常。</li>
-              <li>若上述有問題，依序檢查防火牆、路由、交換器或對端設備。</li>
-              <li>用 <code>curl</code> 或 <code>telnet</code> 測試應用層指定 port 是否有通。</li>
-            </ol>
+            <p>碰到 網路不通，我有一套標準流程：</p>
+            <p>先看自己有沒有抓到 IP。</p>
+            <p>ping 閘道（Gateway），確認內網是通的。</p>
+            <p>ping 8.8.8.8 看能不能出外網。</p>
+            <p>如果 IP 能通但網址不通，那八成就是 DNS 掉漆了，我會去檢查 <code>/etc/resolv.conf</code>。</p>
           </div>
         </section>
 
@@ -1290,13 +1287,11 @@
           <div class="note-block">2.網路不通怎麼一步步排查？</div>
           <div class="script-block">
 
-            <ol>
-              <li>檢查本機網路線與 IP 配置。</li>
-              <li><code>ping 閘道IP</code> 判斷網段內通暢否。</li>
-              <li><code>ping 8.8.8.8</code> 判斷是否得出外網。</li>
-              <li><code>ping google.com</code> 確認是否為 DNS 設定問題。</li>
-              <li>檢查相關節點的路徑、防護牆或交換器設定。</li>
-            </ol>
+            <p>碰到 網路不通，我有一套標準流程：</p>
+            <p>先看自己有沒有抓到 IP。</p>
+            <p>ping 閘道（Gateway），確認內網是通的。</p>
+            <p>ping 8.8.8.8 看能不能出外網。</p>
+            <p>如果 IP 能通但網址不通，那八成就是 DNS 掉漆了，我會去檢查 <code>/etc/resolv.conf</code>。</p>
           </div>
         </section>
 
